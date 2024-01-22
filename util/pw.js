@@ -1,5 +1,5 @@
 const version = "@3.3.0";
-const botName = "🟢 MUSIC BOT";
+const botName = "🟢Samurai MUSIC BOT";
 
 function printWatermark() {
   console.log('\x1b[1m\x1b[36m╔════════════════════════════════════════════╗');
