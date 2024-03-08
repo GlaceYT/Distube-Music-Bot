@@ -70,7 +70,7 @@ module.exports = {
 
       const button3 = new ButtonBuilder()
         .setLabel('Code')
-        .setURL('https://replit.com/@BEASTGAMERS1?tab=community')
+        .setURL('https://github.com/RTX-GAMINGG/RTX-MUSIC-BOT-v3.6')
         .setStyle(ButtonStyle.Link);
 
       const row = new ActionRowBuilder()
