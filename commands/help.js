@@ -41,7 +41,8 @@ module.exports = {
           { name: '🔄 Autoplay', value: 'Enable or disable autoplay [play random songs ]' },
           { name: '⏩ Seek', value: 'Seek to a specific time in the current song' },
           { name: '⏮️ Previous', value: 'Play the previous song in the queue' },
-          { name: '🔀 Shuffle', value: 'Shuffle the songs in queue' }
+          { name: '🔀 Shuffle', value: 'Shuffle the songs in queue' },
+          { name: '📃 playlist', value: 'manage the playlists' }
         )
         .setImage(`https://cdn.discordapp.com/attachments/1004341381784944703/1165201249331855380/RainbowLine.gif?ex=654f37ba&is=653cc2ba&hm=648a2e070fab36155f4171962e9c3bcef94857aca3987a181634837231500177&`); 
 
