@@ -46,7 +46,7 @@ client.player = new DisTube(client, {
     new DeezerPlugin(),
   ],
 });
-
+process.env.YTDL_NO_UPDATE = true;
 const player = client.player;
 
 fs.readdir("./events", (_err, files) => {
