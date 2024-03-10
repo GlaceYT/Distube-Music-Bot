@@ -57,20 +57,20 @@ module.exports = {
            { name: '🎵 Now Playing', value: 'Display the currently playing song information' },
           { name: '🔊 Volume', value: 'Adjust the music volume [ hearing at high volumes is risky ]' },
         ) 
-       .setImage('https://cdn.discordapp.com/attachments/1150827819547504741/1168917372267151370/standard.gif?ex=65538222&is=65410d22&hm=b4994392f44679da41fc9304eb69deaa3769e136057556deec0db69ae8d33a97&')
+       .setImage('https://cdn.discordapp.com/attachments/1175120971062054964/1216388696605982760/standard_3.gif?ex=66003540&is=65edc040&hm=3117a7b71ac733baea9412b0027dea0ffc3e4049df80284abe32c6c6b71ba166&')
       const button1 = new ButtonBuilder()
         .setLabel('YouTube')
-        .setURL('https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A')
+        .setURL('https://cdn.discordapp.com/attachments/1175120971062054964/1216389879093792939/standard_5.gif?ex=6600365a&is=65edc15a&hm=93287f61ba4fbc2cbda56bab92db1118ec4fd18cda493c3b438ce53741609009&')
         .setStyle(ButtonStyle.Link);
 
       const button2 = new ButtonBuilder()
         .setLabel('Discord')
-        .setURL('https://discord.gg/FUEHs7RCqz')
+        .setURL('https://cdn.discordapp.com/attachments/1175120971062054964/1216389879093792939/standard_5.gif?ex=6600365a&is=65edc15a&hm=93287f61ba4fbc2cbda56bab92db1118ec4fd18cda493c3b438ce53741609009&')
         .setStyle(ButtonStyle.Link);
 
       const button3 = new ButtonBuilder()
-        .setLabel('Code')
-        .setURL('https://github.com/RTX-GAMINGG/RTX-MUSIC-BOT-v3.6')
+        .setLabel('Creator')
+        .setURL('https://cdn.discordapp.com/attachments/1175120971062054964/1216391019960991825/standard_6.gif?ex=6600376a&is=65edc26a&hm=cb4bd884a48f0ff823056f3a6b578b87247aeccfbef495ee965687a934a17202&')
         .setStyle(ButtonStyle.Link);
 
       const row = new ActionRowBuilder()
