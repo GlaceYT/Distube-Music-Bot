@@ -1,5 +1,5 @@
 
-# Music Bot RTX GAMINGG
+# Music Bot BBLM Official
 
 ## Overview
 
