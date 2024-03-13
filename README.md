@@ -37,9 +37,9 @@ All code in this project is authored by BBLM. Please do not use this code for an
    FOR EMOJIS EITHER YOU CAN EDIT OR JOIN OUR DISCORD SERVER 
    SO WE ADD BOT TO OUR SERVER SO YOU GET ANIMATED EMOJIS.
 
-   DISCORD SERVER : https://discord.gg/FUEHs7RCqz
-   YOUTUBE : https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A
+   DISCORD SERVER : https://discord.gg/mqwCpFgaBN
+   YOUTUBE : https://www.youtube.com/@bblmmesbah/
 
    FOR HELP CONTACT ME ON DISCORD
-   ## Contact    [ DISCORD SERVER :  https://discord.gg/c4kaW2sSbm ]
+   ## Contact    [ DISCORD SERVER :  https://discord.gg/mqwCpFgaBN ]
 */z
