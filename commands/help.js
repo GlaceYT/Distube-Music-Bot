@@ -56,7 +56,7 @@ module.exports = {
            { name: '🎵 Now Playing', value: 'Display the currently playing song information' },
           { name: '🔊 Volume', value: 'Adjust the music volume [ hearing at high volumes is risky ]' },
         ) 
-       .setImage('https://media.discordapp.net/attachments/968310975893737472/1215049048369668106/Ziak_GIF_-_Ziak_-_Discover__Share_GIFs.gif')
+       .setImage('https://media.discordapp.net/attachments/968310975893737472/1224241898865295422/download_2.gif?ex=661cc71e&is=660a521e&hm=c0a91438c4ff90206f2e58a11f45f1b2043f95c7b83c7385ac91f912097fda46&')
       const button1 = new ButtonBuilder()
         .setLabel('YouTube')
         .setURL('https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A')
