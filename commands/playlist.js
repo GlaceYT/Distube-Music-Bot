@@ -507,7 +507,7 @@ await interaction.editReply({
           .setDescription(`\n${playlist?.playlist?.map(data =>
             `\n**${number++} |** \`${data.name}\` - **${playlist?.musics?.filter(m => m.playlist_name === data.name)?.length || 0}** plays (<t:${Math.floor(data.createdTime / 1000) }:R>)`
           ) }`)
-          .setFooter({ text: 'YouTube - RTX GAMING' })
+          .setFooter({ text: 'YouTube - GlaceYT' })
         return interaction.reply({ embeds: [embed] }).catch(e => { }) 
 
       }
