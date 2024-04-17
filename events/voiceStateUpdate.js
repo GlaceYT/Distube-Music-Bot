@@ -1,3 +1,25 @@
+/*
+
+  ________.__                        _____.___.___________
+ /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
+/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
+\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
+ \______  /____(____  /\___  >___  >  / ______|  |____|   
+        \/          \/     \/    \/   \/                  
+
+╔════════════════════════════════════════════════════════════════════════╗
+║                                                                        ║
+║  ## Created by GlaceYT!                                                ║
+║  ## Feel free to utilize any portion of the code                       ║
+║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
+║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
+║                                                                        ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+
+*/
+
+
 const db = require("../mongoDB");
 module.exports = async (client, oldState, newState) => {
 const queue = client.player.getQueue(oldState.guild.id);
@@ -48,16 +70,22 @@ await queue.resume();
 
 /*
 
-  ██████╗░████████╗██╗░░██╗           
-  ██╔══██╗╚══██╔══╝╚██╗██╔╝          
-  ██████╔╝░░░██║░░░░╚███╔╝░          
-  ██╔══██╗░░░██║░░░░██╔██╗░          
-  ██║░░██║░░░██║░░░██╔╝╚██╗          
-  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝          
+  ________.__                        _____.___.___________
+ /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
+/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
+\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
+ \______  /____(____  /\___  >___  >  / ______|  |____|   
+        \/          \/     \/    \/   \/                  
 
-   
-   # MADE BY RTX!! FEEL FREE TO USE ANY PART OF CODE
-   ## FOR HELP CONTACT ME ON DISCORD
-   ## Contact    [ DISCORD SERVER :  https://discord.gg/FUEHs7RCqz ]
-   ## YT : https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A
+╔════════════════════════════════════════════════════════════════════════╗
+║                                                                        ║
+║  ## Created by GlaceYT!                                                ║
+║  ## Feel free to utilize any portion of the code                       ║
+║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
+║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
+║                                                                        ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+
 */
+
