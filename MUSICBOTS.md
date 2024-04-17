@@ -27,8 +27,5 @@ To get started with our Music Bot on Replit:
 
 Refer to our bot's documentation for detailed information on usage and configuration.
 
-## Support
-
-If you have any questions or encounter issues, please don't hesitate to reach out to our support team at []. We are here to help you make the most of your music bot experience on Replit.
 
 Enjoy sharing music and creating memorable moments with your Discord community!
