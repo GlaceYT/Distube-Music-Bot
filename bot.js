@@ -20,7 +20,6 @@
 */
 
 
-
 const { Client, GatewayIntentBits, Partials } = require("discord.js");
 const { DisTube } = require("distube");
 const { SpotifyPlugin } = require("@distube/spotify");
@@ -94,7 +93,17 @@ fs.readdir(config.commandsDir, (err, files) => {
   });
 });
 
+client.on('messageCreate', async (message) => {
+  if (!message.content.startsWith('++')) return; // Ne réagit que si le message commence par '++'
+  const args = message.content.slice('++'.length).trim().split(/ +/);
+  const command = args.shift().toLowerCase();
 
+  if (command === 'play') {
+    const song = args.join(' ');
+    if (!song) return message.channel.send('You need to provide a song link!');
+    // Code pour jouer de la musique en utilisant le lien de la chanson fourni
+  }
+});
 
 if (config.TOKEN || process.env.TOKEN) {
   client.login(config.TOKEN || process.env.TOKEN).catch((e) => {
