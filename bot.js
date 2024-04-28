@@ -95,6 +95,17 @@ fs.readdir(config.commandsDir, (err, files) => {
 });
 
 
+client.on('messageCreate', async (message) => {
+  if (!message.content.startsWith('++')) return; // Ne réagit que si le message commence par '++'
+  const args = message.content.slice('++'.length).trim().split(/ +/);
+  const command = args.shift().toLowerCase();
+
+  if (command === 'play') {
+    const song = args.join(' ');
+    if (!song) return message.channel.send('You need to provide a song link!');
+    // Code pour jouer de la musique en utilisant le lien de la chanson fourni
+  }
+});
 
 if (config.TOKEN || process.env.TOKEN) {
   client.login(config.TOKEN || process.env.TOKEN).catch((e) => {
@@ -106,7 +117,6 @@ if (config.TOKEN || process.env.TOKEN) {
   }, 2000);
 }
 
-
 if(config.mongodbURL || process.env.MONGO){
   const mongoose = require("mongoose")
   mongoose.connect(config.mongodbURL || process.env.MONGO, {
@@ -116,10 +126,9 @@ if(config.mongodbURL || process.env.MONGO){
     console.log('\x1b[32m%s\x1b[0m', `|    🍔 Connected MongoDB!`)
   }).catch((err) => {
     console.log('\x1b[32m%s\x1b[0m', `|    🍔 Failed to connect MongoDB!`)})
-  } else {
+} else {
   console.log('\x1b[32m%s\x1b[0m', `|    🍔 Error MongoDB!`)
-  }
-
+}
 
 const express = require("express");
 const app = express();
@@ -133,7 +142,6 @@ app.listen(port, () => {
 });
 printWatermark();
 
-/*
 
   ________.__                        _____.___.___________
  /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
