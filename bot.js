@@ -124,7 +124,7 @@ if(config.mongodbURL || process.env.MONGO){
 const express = require("express");
 const app = express();
 const port = 3000;
-app.get('2p', (req, res) => {
+app.get('/', (req, res) => {
   const imagePath = path.join(__dirname, 'index.html');
   res.sendFile(imagePath);
 });
