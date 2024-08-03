@@ -46,6 +46,9 @@ module.exports = {
     }
 
     try {
+      // Defer the reply to give more time for processing the search results
+      await interaction.deferReply();
+
       const searchResults = await yts(query);
       const videos = searchResults.videos.slice(0, 10);
 
@@ -58,7 +61,7 @@ module.exports = {
             url: "https://discord.gg/xQF9f9yUEM"
           })
           .setDescription(lang.findNoResults);
-        return interaction.reply({ embeds: [embed] });
+        return interaction.followUp({ embeds: [embed] });
       }
 
       const rows = [];
@@ -82,7 +85,7 @@ module.exports = {
           inline: false
         })));
 
-      await interaction.reply({ embeds: [embed], components: rows });
+      await interaction.followUp({ embeds: [embed], components: rows });
 
       const filter = i => i.customId.startsWith('play_') && i.user.id === interaction.user.id;
       const collector = interaction.channel.createMessageComponentCollector({ filter, time: 15000 });
@@ -123,7 +126,7 @@ module.exports = {
 
     } catch (error) {
       console.error(error);
-      interaction.reply('An error occurred while searching for the song.');
+      await interaction.followUp('An error occurred while searching for the song.');
     }
   },
 };
