@@ -21,7 +21,7 @@ cookies:{
   secure: true,
   session: false,
   storeId: "0",
-  value: "1WEHRrYUBttCn9ih/ACbOwdBzceu9lwe-x",
+  value: "-FvkQwb6RSeszLRj/AjA-_EBNxB7qS5J8h",
   id: 1
 },
 };
