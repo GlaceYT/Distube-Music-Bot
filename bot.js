@@ -1,3 +1,4 @@
+process.env.YTDL_NO_UPDATE = '1';
 require('dotenv').config();
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
 const fs = require('fs');
@@ -41,15 +42,38 @@ eventFiles.forEach(file => {
   }
 });
 
+
+const youtubeCookies = [
+  {
+      domain: client.config.cookies.domain,
+      expirationDate: client.config.cookies.expirationDate,
+      hostOnly: client.config.cookies.hostOnly,
+      httpOnly: client.config.cookies.httpOnly,
+      name: client.config.cookies.name,
+      path: client.config.cookies.path,
+      sameSite: client.config.cookies.sameSite,
+      secure: client.config.cookies.secure,
+      session: client.config.cookies.session,
+      value: client.config.cookies.value,
+      id: client.config.cookies.id
+  }
+];
+
+
 client.distube = new DisTube(client, {
-    plugins: [
-        new YouTubePlugin(),     // Supports YouTube
-        new SpotifyPlugin(),     // Supports Spotify
-        new SoundCloudPlugin(),  // Supports SoundCloud
-        new DeezerPlugin(),      // Supports Deezer
-        new DirectLinkPlugin(),  // Supports direct audio links
-        new YtDlpPlugin(),       // Supports 700+ sites including YouTube
-    ],
+  plugins: [
+      new YouTubePlugin({
+          cookies: youtubeCookies, 
+      }),
+      new SpotifyPlugin(),
+      new SoundCloudPlugin(),
+      new DeezerPlugin(),
+      new DirectLinkPlugin(),
+      new YtDlpPlugin(),
+  ],
+  emitNewSongOnly: true,
+  savePreviousSongs: true,
+  nsfw: false,
 });
 
 require('./events/distubeEvents')(client);
