@@ -1,4 +1,3 @@
-process.env.YTDL_NO_UPDATE = '1';
 require('dotenv').config();
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
 const fs = require('fs');
@@ -42,80 +41,31 @@ eventFiles.forEach(file => {
   }
 });
 
-
-const youtubeCookies = [
-  {
-    name: 'PREF',
-    value: 'f4=4000000&tz=Asia.Calcutta',
-    domain: '.youtube.com',
-    path: '/',
-    expires: 1757847365.633691,
-    httpOnly: false,
-    secure: true,
-    session: false
-  },
-  {
-    name: 'VISITOR_PRIVACY_METADATA',
-    value: 'CgJJThIEGgAgIg%3D%3D',
-    domain: '.youtube.com',
-    path: '/',
-    expires: 1738839364.570015,
-    httpOnly: true,
-    secure: true,
-    session: false,
-    sameSite: 'None'
-  },
-  {
-    name: 'YSC',
-    value: 'bcGhofX2yAU',
-    domain: '.youtube.com',
-    path: '/',
-    expires: -1,
-    httpOnly: true,
-    secure: true,
-    session: true,
-    sameSite: 'None'
-  },
-  {
-    name: 'VISITOR_INFO1_LIVE',
-    value: 'H5Rn0cV5XxA',
-    domain: '.youtube.com',
-    path: '/',
-    expires: 1738839364.569995,
-    httpOnly: true,
-    secure: true,
-    session: false,
-    sameSite: 'None'
-  },
-  {
-    name: 'GPS',
-    value: '1',
-    domain: '.youtube.com',
-    path: '/',
-    expires: 1723289164.569805,
-    httpOnly: true,
-    secure: true,
-    session: false,
-    sameSite: 'None'
-  }
-];
-
-
-
 client.distube = new DisTube(client, {
-  plugins: [
-      new YouTubePlugin({
-          cookies: youtubeCookies, 
-      }),
-      new SpotifyPlugin(),
-      new SoundCloudPlugin(),
-      new DeezerPlugin(),
-      new DirectLinkPlugin(),
-      new YtDlpPlugin(),
-  ],
-  emitNewSongOnly: true,
-  savePreviousSongs: true,
-  nsfw: false,
+    plugins: [
+        new YouTubePlugin({
+          cookies: [
+            {
+              domain: client.config.cookies.domain,
+              expirationDate: client.config.cookies.expirationDate,
+              hostOnly: client.config.cookies.hostOnly,
+              httpOnly: client.config.cookies.httpOnly,
+              name: client.config.cookies.name,
+              path: client.config.cookies.path,
+              sameSite: client.config.cookies.sameSite,
+              secure: client.config.cookies.secure,
+              session: client.config.cookies.session,
+              value: client.config.cookies.value,
+              id: client.config.cookies.id
+            },
+          ],
+        }),     // Supports YouTube
+        new SpotifyPlugin(),     // Supports Spotify
+        new SoundCloudPlugin(),  // Supports SoundCloud
+        new DeezerPlugin(),      // Supports Deezer
+        new DirectLinkPlugin(),  // Supports direct audio links
+        new YtDlpPlugin(),       // Supports 700+ sites including YouTube
+    ],
 });
 
 require('./events/distubeEvents')(client);
@@ -132,7 +82,7 @@ app.listen(port, () => {
 });
 
 
-client.login(process.env.TOKEN);
+client.login(client.config.token);
 
 module.exports = client;
 
