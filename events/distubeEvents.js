@@ -137,35 +137,32 @@ module.exports = (client) => {
         return;
       }
 
-      client.distube.on('error', async (channel, error) => {
-        try {
-         
-            if (channel && channel.type === ChannelType.GuildText) {
-                const embed = new EmbedBuilder()
-                    .setColor('#FF0000')
-                    .setAuthor({ 
-                        name: messages.error.authorName, 
-                        iconURL: musicIcons.dotIcon,
-                        url: messages.error.url
-                    })
-                    .setDescription(`${messages.error.errorMessage}: ${error.message}`)
-                    .setTimestamp();
-    
-                await channel.send({ embeds: [embed] });
-            } else {
-                // Handle other types of errors that are not channel-specific
-                //console.error('Error:', error.message);
-            }
-    
-            // Additional error-specific logic
-            if (error.errorCode === 'FFMPEG_EXITED') {
-                //console.warn('FFMPEG exited with code:', error.errorCode);
-                // Implement any additional logic for this specific error
-            }
-        } catch (err) {
-            // Handle any errors that occur during error handling
-            //console.error('Failed to handle error:', err);
+      try {
+        const embed = new EmbedBuilder()
+          .setColor('#FF0000')
+          .setAuthor({ 
+            name: messages.empty.authorName, 
+            iconURL: musicIcons.wrongIcon,
+            url: messages.empty.url
+          })
+          .setDescription(messages.empty.description)
+          .setTimestamp();
+
+        if (queue.textChannel.isTextBased()) {
+          await queue.textChannel.send({ embeds: [embed] });
+        } else {
+          //console.error('Invalid text channel:', queue.textChannel);
         }
+      } catch (error) {
+        //console.error('Failed to send message:', error);
+      }
     });
+
+  // Handle ffmpeg errors globally if needed
+  client.distube.on('error', (error) => {
+    if (error.errorCode === 'FFMPEG_EXITED') {
+      //console.warn('FFMPEG exited with code:', error.errorCode);
+      // Implement additional logic to handle this specific error if needed
+    }
   });
 };
