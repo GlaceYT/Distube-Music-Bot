@@ -10,6 +10,20 @@ module.exports = {
 // Language: German (de)
 // Language: Spanish (es)
 // Language: Arabic (ar)
+cookies:{
+  domain: ".youtube.com",
+  expirationDate: 1757764090.235338,
+  hostOnly: false,
+  httpOnly: false,
+  name: "__Secure-1PAPISID",
+  path: "/",
+  sameSite: "unspecified",
+  secure: true,
+  session: false,
+  storeId: "0",
+  value: "1WEHRrYUBttCn9ih/ACbOwdBzceu9lwe-x",
+  id: 1
+},
 };
 
 
