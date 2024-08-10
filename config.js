@@ -1,6 +1,6 @@
 module.exports = {
   ownerID: '1004206704994566164',
-  token: "",
+   token: process.env.TOKEN,
   clientId: "1270401318627836006",
   guildId: "1106591466651922502",
   embedColor: '#FF0000',
