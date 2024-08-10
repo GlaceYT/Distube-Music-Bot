@@ -1,6 +1,8 @@
 module.exports = {
-  ownerID: 'YOUR_OWNER_ID',
-  token: process.env.TOKEN,
+  ownerID: '618454945183825940',
+  token: "",
+  clientId: "838868074458382396",
+  guildId: "742943833683132436",
   embedColor: '#FF0000',
   geniusToken: '0CHr9jtPjR7EKraXUVv6__8ELmEwFeUwt5vYAhk-is_fGOq-10-epdMzESkMPUnf',
   language: 'en',
@@ -10,19 +12,19 @@ module.exports = {
 // Language: German (de)
 // Language: Spanish (es)
 // Language: Arabic (ar)
-cookies:{
-  domain: ".youtube.com",
-  expirationDate: 1757764090.235338,
-  hostOnly: false,
-  httpOnly: false,
-  name: "__Secure-1PAPISID",
-  path: "/",
-  sameSite: "unspecified",
-  secure: true,
-  session: false,
-  storeId: "0",
-  value: "-FvkQwb6RSeszLRj/AjA-_EBNxB7qS5J8h",
-  id: 1
+  cookies:{
+    domain: ".youtube.com",
+    expirationDate: 1757764090.235338,
+    hostOnly: false,
+    httpOnly: false,
+    name: "__Secure-1PAPISID",
+    path: "/",
+    sameSite: "unspecified",
+    secure: true,
+    session: false,
+    storeId: "0",
+    value: "1WEHRrYUBttCn9ih/ACbOwdBzceu9lwe-x",
+    id: 1
 },
 };
 
