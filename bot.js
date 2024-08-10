@@ -62,9 +62,14 @@ const youtubeCookies = [
 
 client.distube = new DisTube(client, {
   plugins: [
-   
+      new YouTubePlugin({
+          cookies: youtubeCookies, 
+      }),
       new SpotifyPlugin(),
       new SoundCloudPlugin(),
+      new DeezerPlugin(),
+      new DirectLinkPlugin(),
+      new YtDlpPlugin(),
   ],
   emitNewSongOnly: true,
   savePreviousSongs: true,
