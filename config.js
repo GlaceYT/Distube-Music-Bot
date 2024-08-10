@@ -1,8 +1,8 @@
 module.exports = {
-  ownerID: '618454945183825940',
+  ownerID: '1004206704994566164',
   token: "",
-  clientId: "838868074458382396",
-  guildId: "742943833683132436",
+  clientId: "1270401318627836006",
+  guildId: "1106591466651922502",
   embedColor: '#FF0000',
   geniusToken: '0CHr9jtPjR7EKraXUVv6__8ELmEwFeUwt5vYAhk-is_fGOq-10-epdMzESkMPUnf',
   language: 'en',
