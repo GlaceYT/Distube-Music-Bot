@@ -45,19 +45,61 @@ eventFiles.forEach(file => {
 
 const youtubeCookies = [
   {
-      domain: client.config.cookies.domain,
-      expirationDate: client.config.cookies.expirationDate,
-      hostOnly: client.config.cookies.hostOnly,
-      httpOnly: client.config.cookies.httpOnly,
-      name: client.config.cookies.name,
-      path: client.config.cookies.path,
-      sameSite: client.config.cookies.sameSite,
-      secure: client.config.cookies.secure,
-      session: client.config.cookies.session,
-      value: client.config.cookies.value,
-      id: client.config.cookies.id
+    name: 'PREF',
+    value: 'f4=4000000&tz=Asia.Calcutta',
+    domain: '.youtube.com',
+    path: '/',
+    expires: 1757847365.633691,
+    httpOnly: false,
+    secure: true,
+    session: false
+  },
+  {
+    name: 'VISITOR_PRIVACY_METADATA',
+    value: 'CgJJThIEGgAgIg%3D%3D',
+    domain: '.youtube.com',
+    path: '/',
+    expires: 1738839364.570015,
+    httpOnly: true,
+    secure: true,
+    session: false,
+    sameSite: 'None'
+  },
+  {
+    name: 'YSC',
+    value: 'bcGhofX2yAU',
+    domain: '.youtube.com',
+    path: '/',
+    expires: -1,
+    httpOnly: true,
+    secure: true,
+    session: true,
+    sameSite: 'None'
+  },
+  {
+    name: 'VISITOR_INFO1_LIVE',
+    value: 'H5Rn0cV5XxA',
+    domain: '.youtube.com',
+    path: '/',
+    expires: 1738839364.569995,
+    httpOnly: true,
+    secure: true,
+    session: false,
+    sameSite: 'None'
+  },
+  {
+    name: 'GPS',
+    value: '1',
+    domain: '.youtube.com',
+    path: '/',
+    expires: 1723289164.569805,
+    httpOnly: true,
+    secure: true,
+    session: false,
+    sameSite: 'None'
   }
 ];
+
 
 
 client.distube = new DisTube(client, {
