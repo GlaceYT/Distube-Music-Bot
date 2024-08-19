@@ -1,8 +1,8 @@
 // config/config.js
 module.exports = {
     token: '',
-    clientId: '1273230302822797312',
-    guildId: '1106591466651922502',
+    clientId: 'botid',
+    guildId: 'yourserverid',
     youtubeApiKey: process.env.YOUTUBE_API_KEY,
     spotify: {
     clientId: process.env.SPOTIFY_CLIENT_ID,
