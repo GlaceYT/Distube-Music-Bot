@@ -46,7 +46,7 @@
 
 ### Step 1: Update `config.json`
 
-1. Open the `config.json` and add your mongodb url in ENV.
+1. Open the `config.json` and add your mongodb url, youtube api & spotify [ You can get them from our Sever ].
 
 ### Step 2: Set Up Hosting Service
 
@@ -68,7 +68,6 @@ Find your application, and retrieve the bot token from the "Bot" section.
 Create an environment variable with the following details:
 Key: TOKEN
 Value: [your bot token]
-same for youtube api & spotify [ You can get them from Sever ]
 Deploy your application using your hosting service’s deployment process.
 
 ### Step 6: Wait and Test
