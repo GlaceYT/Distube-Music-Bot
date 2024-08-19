@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlaceYT</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background: linear-gradient(45deg, #0f0, #00f);
+            font-family: 'Courier New', Courier, monospace;
+            color: #0f0;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .text {
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: glitch 1.5s infinite;
+            position: relative;
+            white-space: nowrap;
+        }
+        
+        @keyframes glitch {
+            0% {
+                transform: translateX(0);
+                text-shadow: 2px 0 red, -2px 0 blue;
+            }
+            20% {
+                transform: translateX(-5px);
+                text-shadow: 2px 0 red, -2px 0 blue;
+            }
+            40% {
+                transform: translateX(5px);
+                text-shadow: -2px 0 red, 2px 0 blue;
+            }
+            60% {
+                transform: translateX(-5px);
+                text-shadow: 2px 0 red, -2px 0 blue;
+            }
+            80% {
+                transform: translateX(5px);
+                text-shadow: -2px 0 red, 2px 0 blue;
+            }
+            100% {
+                transform: translateX(0);
+                text-shadow: 2px 0 red, -2px 0 blue;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">Music Bot Free Tier [ GlaceYT ]</div>
+    </div>
+</body>
+</html>
