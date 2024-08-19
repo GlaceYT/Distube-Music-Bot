@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('help')
-    .setDescription('Shows all available commands with their descriptions.'),
+    .setDescription('Shows all available commands'),
   
   async execute(interaction) {
     // Path to the folder containing your command files
