@@ -1,7 +1,7 @@
 ![Animated Background](https://i.imgur.com/ECZKmlO.gif)
 
 <h1 align="center" style="font-family: Arial, sans-serif; color: #FF6F61; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-  ALL IN ONE BOT
+  Distube Music Bot
 </h1>
 
 <p align="center">
@@ -40,13 +40,13 @@
 
 
 
-# Discord All-in-One BOT Installation Guide
+# Installation Guide
 
 ## How to Install
 
 ### Step 1: Update `config.json`
 
-1. Open the `config.json` and add your mongodb url.
+1. Open the `config.json` and add your mongodb url in ENV.
 
 ### Step 2: Set Up Hosting Service
 
@@ -68,11 +68,10 @@ Find your application, and retrieve the bot token from the "Bot" section.
 Create an environment variable with the following details:
 Key: TOKEN
 Value: [your bot token]
+same for youtube api & spotify [ You can get them from Sever ]
 Deploy your application using your hosting service’s deployment process.
 
 ### Step 6: Wait and Test
 Wait approximately five minutes for your bot to deploy and start up.
 
 Test your bot by sending commands to ensure it is operational.
-
-🎉 Congratulations! Your bot is now up and running. 🥳
