@@ -64,7 +64,7 @@ class PlayerManager {
     this.distube.on('error', (error) => this.errorHandler.handleError(error));
     this.distube.on('disconnect', (queue) => this.handleDisconnect(queue));
     this.distube.on('empty', (queue) => this.handleEmpty(queue));
-    //this.distube.on('debug', (message) => console.debug(`DisTube Debug: ${message}`));
+    this.distube.on('debug', (message) => console.debug(`DisTube Debug: ${message}`));
   }
 
   handlePlaySong(queue, song) {
